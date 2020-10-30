@@ -1,0 +1,35 @@
+﻿<Window x:Class="Prb.Boekenkast.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prb.Boekenkast.Wpf"
+        mc:Ignorable="d"
+        Title="Boekenkast" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox x:Name="grpBoekenkast" Header="Boekenkast" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="362">
+            <Grid>
+                <Button x:Name="btnNieuw" Content="Nieuw" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="82" Click="btnNieuw_Click"/>
+                <Button x:Name="btnWijzig" Content="Wijzig" HorizontalAlignment="Left" Height="30" Margin="97,10,0,0" VerticalAlignment="Top" Width="82" Click="btnWijzig_Click"/>
+                <Button x:Name="btnVerwijder" Content="Verwijder" HorizontalAlignment="Left" Height="30" Margin="184,10,0,0" VerticalAlignment="Top" Width="82" Click="btnVerwijder_Click"/>
+                <ListBox x:Name="lstBoeken" HorizontalAlignment="Center" Height="321" Margin="0,45,0,0" VerticalAlignment="Top" Width="330" SelectionChanged="lstBoeken_SelectionChanged"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpDetails" Header="Details" HorizontalAlignment="Left" Height="415" Margin="377,0,0,0" VerticalAlignment="Top" Width="381">
+            <Grid>
+                <Button x:Name="btnBewaren" Content="Bewaren" HorizontalAlignment="Left" Height="28" Margin="10,21,0,0" VerticalAlignment="Top" Width="81" Click="btnBewaren_Click"/>
+                <Button x:Name="btnAnnuleren" Content="Annuleren" HorizontalAlignment="Left" Height="28" Margin="104,21,0,0" VerticalAlignment="Top" Width="80" Click="btnAnnuleren_Click"/>
+                <Label Content="Titel : " HorizontalAlignment="Left" Height="25" Margin="10,77,0,0" VerticalAlignment="Top" Width="81"/>
+                <Label Content="Jaar : " HorizontalAlignment="Left" Height="25" Margin="10,115,0,0" VerticalAlignment="Top" Width="81"/>
+                <TextBox x:Name="txtTitel" HorizontalAlignment="Left" Height="30" Margin="104,77,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+                <TextBox x:Name="txtJaar" TextAlignment="Right" HorizontalAlignment="Left" Height="30" Margin="104,112,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+                <Label Content="Auteur : " HorizontalAlignment="Left" Height="25" Margin="10,155,0,0" VerticalAlignment="Top" Width="81"/>
+                <ComboBox x:Name="cmbAuteur" HorizontalAlignment="Left" Height="25" Margin="104,155,0,0" VerticalAlignment="Top" Width="239" SelectionChanged="cmbAuteur_SelectionChanged"/>
+                <Label Content="Nationaliteit : " HorizontalAlignment="Left" Height="24" Margin="106,200,0,0" VerticalAlignment="Top" Width="78"/>
+                <Label x:Name="lblNationaliteit" Content="" HorizontalAlignment="Left" Height="24" Margin="212,200,0,0" VerticalAlignment="Top" Width="131"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
